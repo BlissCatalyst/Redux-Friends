@@ -1,5 +1,11 @@
 const initialState = {
-  friends: []
+  deletingFriend: false,
+  fetchingFriends: false,
+  friends: [],
+  loggingIn: false,
+  savingFriends: false,
+  updatingFriend: false,
+  error: null
 };
 
 const reducer = (state = initialState, action) => {
@@ -8,3 +14,5 @@ const reducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default reducer;
