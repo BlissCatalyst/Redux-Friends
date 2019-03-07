@@ -9,6 +9,16 @@ export default class Login extends React.Component {
     }
   };
 
+  handleChanges = e => {
+    this.setState({
+      credentials: {
+        ...this.state.credentials,
+        [e.target.name]: e.target.value
+        }
+      }
+    )
+  };
+
   render() {
     return (
       <div>
@@ -25,6 +35,7 @@ export default class Login extends React.Component {
             value={this.state.credentials.password}
             onChange={this.handleChanges} 
            />
+           <button>Login</button>
         </form>
       </div>
     );
